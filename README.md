@@ -1,6 +1,6 @@
-# Stats Display - Boilerexams Application
+# Local Storage Stats - Boilerexams Take-Home Assessment
 
-**Project: <u>3</u>**
+**Project: <u>3</u>** | Local Storage Stats
 
 Created by Anthony Dierkes
 
