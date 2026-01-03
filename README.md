@@ -37,17 +37,6 @@ To run this project locally after cloning from GitHub:
 3. **Open your browser:**
    The application will be available at `http://localhost:5173` (or the port shown in your terminal).
 
-4. **Build for production:**
-
-   ```bash
-   npm run build
-   ```
-
-5. **Preview production build:**
-   ```bash
-   npm run preview
-   ```
-
 ## Technologies Used
 
 ### React
