@@ -1,13 +1,12 @@
+import { cardData } from "../data/cardData";
 import { Statistics } from "../types/index";
 import { StatCard } from "./StatCard";
 
-interface AttemptDistributionProps {
-  distribution: Statistics.OverallStats["attemptDistribution"];
-}
-
 export function AttemptDistribution({
   distribution,
-}: AttemptDistributionProps) {
+}: {
+  distribution: Statistics.OverallStats["attemptDistribution"];
+}) {
   return (
     <div className="section">
       <h2 className="section-title section-title-distribution">
@@ -21,21 +20,21 @@ export function AttemptDistribution({
       <div className="stats-grid">
         <StatCard
           value={`${distribution.oneAttemptPercent.toFixed(1)}%`}
-          label="One Attempt"
-          className="attempt-distribution-card"
-          description="The percentage of questions that were answered correctly on the first attempt."
+          label={cardData.oneAttempt.label}
+          className={cardData.oneAttempt.className}
+          description={cardData.oneAttempt.description}
         />
         <StatCard
           value={`${distribution.twoAttemptsPercent.toFixed(1)}%`}
-          label="Two Attempts"
-          className="attempt-distribution-card"
-          description="The percentage of questions that required exactly two attempts to answer correctly."
+          label={cardData.twoAttempts.label}
+          className={cardData.twoAttempts.className}
+          description={cardData.twoAttempts.description}
         />
         <StatCard
           value={`${distribution.threeOrMorePercent.toFixed(1)}%`}
-          label="Three or More Attempts"
-          className="attempt-distribution-card"
-          description="The percentage of questions that required three or more attempts to answer correctly."
+          label={cardData.threeOrMoreAttempts.label}
+          className={cardData.threeOrMoreAttempts.className}
+          description={cardData.threeOrMoreAttempts.description}
         />
       </div>
     </div>

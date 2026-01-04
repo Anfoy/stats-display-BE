@@ -1,13 +1,13 @@
 import type { ReactNode } from "react";
 
-interface StatCardProps {
+type StatCardProps = {
   value: string | number;
   label: string;
   className?: string;
   valueColor?: string;
   description?: string;
   subValue?: ReactNode;
-}
+};
 
 export function StatCard({
   value,

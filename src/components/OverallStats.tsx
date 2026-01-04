@@ -1,12 +1,9 @@
 import { StatisticsHandler } from "../lib";
 import { Statistics } from "../types/index";
 import { StatCard } from "./StatCard";
+import { cardData } from "../data/index";
 
-interface OverallStatsProps {
-  stats: Statistics.OverallStats;
-}
-
-export function OverallStats({ stats }: OverallStatsProps) {
+export function OverallStats({ stats }: { stats: Statistics.OverallStats }) {
   const accuracyColor = StatisticsHandler.getAccuracyColor(stats.correctRate);
 
   return (
@@ -21,39 +18,39 @@ export function OverallStats({ stats }: OverallStatsProps) {
       <div className="stats-grid">
         <StatCard
           value={stats.totalQuestions}
-          label="Total Questions"
+          label={cardData.totalQuestions.label}
           valueColor={accuracyColor}
-          description="The total number of questions in the exam or assessment."
+          description={cardData.totalQuestions.description}
         />
         <StatCard
           value={stats.totalAttempts}
-          label="Total Attempts"
-          valueColor="#FFB347"
-          description="The sum of all attempts made across all questions. This includes both correct and incorrect attempts."
+          label={cardData.totalAttempts.label}
+          valueColor={cardData.totalAttempts.valueColor}
+          description={cardData.totalAttempts.description}
         />
         <StatCard
           value={stats.correctAnswers}
-          label="Correct Answers"
-          valueColor="#4CAF50"
-          description="The number of questions that were eventually answered correctly, regardless of how many attempts it took."
+          label={cardData.correctAnswers.label}
+          valueColor={cardData.correctAnswers.valueColor}
+          description={cardData.correctAnswers.description}
         />
         <StatCard
           value={stats.incorrectAnswers}
-          label="Incorrect Answers"
-          valueColor="#F44336"
-          description="The number of questions that were never answered correctly, even after multiple attempts."
+          label={cardData.incorrectAnswers.label}
+          valueColor={cardData.incorrectAnswers.valueColor}
+          description={cardData.incorrectAnswers.description}
         />
         <StatCard
           value={stats.averageAttempts.toFixed(2)}
-          label="Average Attempts"
-          valueColor="#36A2EB"
-          description="The average number of attempts per question, calculated by dividing total attempts by total questions."
+          label={cardData.averageAttempts.label}
+          valueColor={cardData.averageAttempts.valueColor}
+          description={cardData.averageAttempts.description}
         />
         <StatCard
           value={`${stats.firstTryRate.toFixed(1)}%`}
-          label="First Try Success Rate"
-          valueColor="#FF6384"
-          description="The percentage of questions that were answered correctly on the first attempt."
+          label={cardData.firstTryRate.label}
+          valueColor={cardData.firstTryRate.valueColor}
+          description={cardData.firstTryRate.description}
         />
       </div>
     </div>

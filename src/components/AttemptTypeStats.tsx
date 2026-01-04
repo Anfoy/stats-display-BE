@@ -3,16 +3,12 @@ import { SubmissionStructure, Statistics } from "../types/index";
 import { StatisticsHandler } from "../lib/index";
 import { StatCard } from "./StatCard";
 import { AttemptTypeSelector } from "./AttemptTypeSelector";
-
-interface AttemptTypeStatsProps {
+import { cardData } from "../data/index";
+export function AttemptTypeStats({
+  submission,
+}: {
   submission: SubmissionStructure.Submission;
-}
-
-interface AttemptTypeStatsCardsProps {
-  stats: Statistics.OverallStats;
-}
-
-export function AttemptTypeStats({ submission }: AttemptTypeStatsProps) {
+}) {
   const attemptTypesMap = useMemo(
     () => StatisticsHandler.getAttemptTypes(submission),
     [submission]
@@ -56,50 +52,50 @@ export function AttemptTypeStats({ submission }: AttemptTypeStatsProps) {
   );
 }
 
-function AttemptTypeStatsCards({ stats }: AttemptTypeStatsCardsProps) {
+function AttemptTypeStatsCards({ stats }: { stats: Statistics.OverallStats }) {
   return (
     <div className="stats-grid">
       <StatCard
         value={stats.totalQuestions}
-        label="Total Questions"
+        label={cardData.totalQuestions.label}
         valueColor={StatisticsHandler.getAccuracyColor(stats.correctRate)}
-        description="The total number of questions for the selected attempt type."
+        description={cardData.totalQuestions.description}
       />
       <StatCard
         value={stats.totalAttempts}
-        label="Total Attempts"
-        valueColor="#FFB347"
-        description="The sum of all attempts made for this attempt type, including both correct and incorrect attempts."
+        label={cardData.totalAttempts.label}
+        valueColor={cardData.totalAttempts.valueColor}
+        description={cardData.totalAttempts.description}
       />
       <StatCard
         value={stats.correctAnswers}
-        label="Correct Answers"
-        valueColor="#4CAF50"
-        description="The number of questions that were eventually answered correctly for this attempt type."
+        label={cardData.correctAnswers.label}
+        valueColor={cardData.correctAnswers.valueColor}
+        description={cardData.correctAnswers.description}
       />
       <StatCard
         value={stats.incorrectAnswers}
-        label="Incorrect Answers"
-        valueColor="#F44336"
-        description="The number of questions that were never answered correctly for this attempt type."
+        label={cardData.incorrectAnswers.label}
+        valueColor={cardData.incorrectAnswers.valueColor}
+        description={cardData.incorrectAnswers.description}
       />
       <StatCard
         value={stats.totalIncorrectAttempts}
-        label="Incorrect Attempts"
-        valueColor="#FF6B6B"
-        description="The total count of all incorrect attempts made for this attempt type."
+        label={cardData.totalIncorrectAttempts.label}
+        valueColor={cardData.totalIncorrectAttempts.valueColor}
+        description={cardData.totalIncorrectAttempts.description}
       />
       <StatCard
         value={stats.averageAttempts.toFixed(2)} //two decimal places
-        label="Average Attempts"
-        valueColor="#36A2EB"
-        description="The average number of attempts per question for this attempt type."
+        label={cardData.averageAttempts.label}
+        valueColor={cardData.averageAttempts.valueColor}
+        description={cardData.averageAttempts.description}
       />
       <StatCard
         value={`${stats.firstTryRate.toFixed(1)}%`}
-        label="First Try Success Rate"
-        valueColor="#FF6384"
-        description="The percentage of questions answered correctly on the first attempt for this attempt type."
+        label={cardData.firstTryRate.label}
+        valueColor={cardData.firstTryRate.valueColor}
+        description={cardData.firstTryRate.description}
       />
     </div>
   );
