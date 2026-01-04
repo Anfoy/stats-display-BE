@@ -34,6 +34,33 @@
   .stat-label {
     font-size: clamp(0.65rem, 1.3vw, 0.875rem);
   }
+  
+  .stat-tooltip {
+    font-size: clamp(0.6rem, 1.1vw, 0.8rem);
+    padding: clamp(var(--space-sm), 2vw, var(--space-md));
+  }
+  
+  .section-title {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+  
+  .custom-dropdown {
+    max-width: 280px;
+  }
+  
+  .custom-dropdown-toggle {
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    padding: clamp(0.75rem, 1.8vw, 0.9rem) clamp(0.875rem, 2.2vw, 1.125rem);
+  }
+  
+  .custom-dropdown-item {
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+    padding: clamp(var(--space-xs), 1.8vw, var(--space-sm));
+  }
+  
+  .attempt-type-selector label {
+    font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  }
 }
 
 @media (min-width: 300px) and (max-width: 639px) {
@@ -58,6 +85,34 @@
   .stat-label {
     font-size: clamp(0.6rem, 1.5vw, 0.8rem);
     letter-spacing: 0.02em;
+  }
+  
+  .stat-tooltip {
+    font-size: clamp(0.55rem, 1vw, 0.7rem);
+    padding: clamp(var(--space-xs), 1.5vw, var(--space-sm));
+    line-height: 1.4;
+  }
+  
+  .section-title {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+  }
+  
+  .custom-dropdown {
+    max-width: 90%;
+  }
+  
+  .custom-dropdown-toggle {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    padding: clamp(0.625rem, 1.5vw, 0.8rem) clamp(0.75rem, 1.8vw, 1rem);
+  }
+  
+  .custom-dropdown-item {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+    padding: clamp(var(--space-xs), 1.5vw, var(--space-sm));
+  }
+  
+  .attempt-type-selector label {
+    font-size: clamp(0.75rem, 1.5vw, 0.875rem);
   }
 }
 
@@ -90,12 +145,31 @@
   }
   
   .section-title {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
   }
   
   .stat-tooltip {
-    font-size: clamp(0.65rem, 3vw, 0.75rem);
-    padding: clamp(var(--space-sm), 2.5vw, var(--space-md));
+    font-size: clamp(0.5rem, 2.5vw, 0.65rem);
+    padding: clamp(var(--space-xs), 1.2vw, var(--space-sm));
+    line-height: 1.3;
+  }
+  
+  .custom-dropdown {
+    max-width: 90%;
+  }
+  
+  .custom-dropdown-toggle {
+    font-size: clamp(0.7rem, 1.3vw, 0.8rem);
+    padding: clamp(0.5rem, 1.2vw, 0.7rem) clamp(0.625rem, 1.5vw, 0.875rem);
+  }
+  
+  .custom-dropdown-item {
+    font-size: clamp(0.7rem, 1.3vw, 0.8rem);
+    padding: clamp(var(--space-xs), 1.2vw, var(--space-xs));
+  }
+  
+  .attempt-type-selector label {
+    font-size: clamp(0.7rem, 1.3vw, 0.8rem);
   }
 }
 

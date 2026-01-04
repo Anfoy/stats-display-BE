@@ -17,7 +17,8 @@
 .custom-dropdown {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .custom-dropdown-toggle {
