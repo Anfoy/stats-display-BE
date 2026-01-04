@@ -1,13 +1,20 @@
 import { SubmissionStructure, Statistics } from "../types/index";
 
 function formatAttemptTypeName(type: string): string {
+  //AI assisted
   return type
     .split(/[_\s]+/)
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
 }
 
+/**
+ * Map of attempt types to their display names (key: attempt type, value: display name)
+ * @param submission submission data
+ * @returns Map of attempt types to their display names
+ */
 export function getAttemptTypes(
+  //Ai assisted
   submission: SubmissionStructure.Submission
 ): Map<string, string> {
   const attemptTypes = new Set<string>();
@@ -161,6 +168,7 @@ const ACCURACY_COLORS = [
 ] as const;
 
 export function getAccuracyColor(correctRate: number): string {
+  //AI assisted
   return (
     ACCURACY_COLORS.find(({ threshold }) => correctRate >= threshold)?.color ??
     ACCURACY_COLORS[ACCURACY_COLORS.length - 1].color
