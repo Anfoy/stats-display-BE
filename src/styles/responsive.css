@@ -7,6 +7,7 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
   
@@ -17,6 +18,7 @@
 
 @media (min-width: 640px) and (max-width: 767px) {
   .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-sm);
   }
   
@@ -26,7 +28,7 @@
   }
   
   .stat-value {
-    font-size: clamp(1.25rem, 3.5vw, 2.5rem);
+    font-size: clamp(1.45rem, 4.06vw, 2.9rem);
   }
   
   .stat-label {
@@ -34,7 +36,7 @@
   }
 }
 
-@media (min-width: 480px) and (max-width: 639px) {
+@media (min-width: 300px) and (max-width: 639px) {
   .app {
     padding: var(--space-lg) var(--space-sm);
   }
@@ -50,7 +52,7 @@
   }
   
   .stat-value {
-    font-size: clamp(1.1rem, 4vw, 2rem);
+    font-size: clamp(1.364rem, 4.96vw, 2.48rem);
   }
   
   .stat-label {
@@ -59,7 +61,7 @@
   }
 }
 
-@media (max-width: 479px) {
+@media (max-width: 299px) {
   .app {
     padding: var(--space-md) var(--space-xs);
   }
@@ -79,7 +81,7 @@
   }
   
   .stat-value {
-    font-size: clamp(1rem, 5vw, 1.75rem);
+    font-size: clamp(1.32rem, 6.6vw, 2.31rem);
   }
   
   .stat-label {

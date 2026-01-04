@@ -19,11 +19,6 @@
   word-wrap: break-word;
 }
 
-.glass-card:hover {
-  transform: translateY(-4px);
-  background: var(--color-glass-bg-hover);
-  box-shadow: var(--glass-shadow-hover);
-}
 
 .glass-card:focus-visible {
   outline: 2px solid var(--color-accent-neutral);
@@ -34,7 +29,7 @@
 /* Stat Value */
 .stat-value {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 4vw, 4rem);
+  font-size: clamp(1.62rem, 4.32vw, 4.32rem);
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: clamp(var(--space-xs), 1.5vw, var(--space-sm));
@@ -44,13 +39,15 @@
   word-break: break-word;
   width: 100%;
   padding: 0 var(--space-xs);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .attempt-distribution-card .stat-value {
-  background: linear-gradient(80deg, #D4A574, #2C2C2C);
+  background: linear-gradient(80deg, #fbab29, #8B4513);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Stat Label */
@@ -81,20 +78,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: default;
+  cursor: pointer;
   transition: all var(--duration-base) var(--ease-in-out);
   opacity: 0.5;
+  z-index: 10;
 }
 
-.glass-card:hover .stat-info-icon {
-  opacity: 0.8;
-}
-
-.stat-info-icon:hover {
+.stat-info-icon:focus {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.4);
   opacity: 1;
   transform: scale(1.05);
+  outline: none;
+}
+
+.stat-info-icon:active {
+  transform: scale(0.95);
 }
 
 .info-question-mark {
@@ -105,7 +104,7 @@
   user-select: none;
 }
 
-.stat-info-icon:hover .info-question-mark {
+.stat-info-icon:focus .info-question-mark {
   color: var(--color-text-primary);
 }
 
@@ -127,19 +126,26 @@
   pointer-events: none;
   white-space: normal;
   word-wrap: break-word;
+  z-index: 5;
 }
 
-.glass-card.has-description .stat-info-icon:hover ~ .stat-tooltip {
+.glass-card.has-description.tooltip-open .stat-tooltip {
   opacity: 1;
   visibility: visible;
   transition: opacity var(--duration-base) var(--ease-in-out), visibility 0ms;
 }
 
-.glass-card.has-description .stat-info-icon:hover ~ .stat-value,
-.glass-card.has-description .stat-info-icon:hover ~ .stat-label,
-.glass-card.has-description .stat-info-icon:hover ~ *:not(.stat-tooltip):not(.stat-info-icon) {
+.glass-card.has-description.tooltip-open .stat-value,
+.glass-card.has-description.tooltip-open .stat-label,
+.glass-card.has-description.tooltip-open > *:not(.stat-tooltip):not(.stat-info-icon) {
   opacity: 0;
   transition: opacity var(--duration-base) var(--ease-in-out);
+}
+
+.glass-card.has-description.tooltip-open .stat-info-icon {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 
