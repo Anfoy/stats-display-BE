@@ -1,0 +1,10 @@
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(var(--space-sm), 2vw, var(--space-lg));
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  width: 100%;
+}
+

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/index.css";
 import { StatisticsHandler, SubmissionHandler } from "./lib";
 import { OverallStats } from "./components/OverallStats";
 import { AttemptTypeStats } from "./components/AttemptTypeStats";
