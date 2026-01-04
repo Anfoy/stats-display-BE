@@ -11,7 +11,7 @@ type CardData = {
 export const cardData: Record<string, CardData> = {
   totalQuestions: {
     label: "Total Questions",
-    valueColor: "#4CAF50", //Default color; should be overridden by the accuracy color
+    valueColor: "#A5D6A7", //Default color; should be overridden by the accuracy color (brighter)
     description: "The total number of questions in the exam or assessment.",
   },
   totalAttempts: {
@@ -22,13 +22,13 @@ export const cardData: Record<string, CardData> = {
   },
   correctAnswers: {
     label: "Correct Answers",
-    valueColor: "#4CAF50",
+    valueColor: "#A5D6A7",
     description:
       "The number of questions that were eventually answered correctly, regardless of how many attempts it took.",
   },
   incorrectAnswers: {
     label: "Incorrect Answers",
-    valueColor: "#F44336",
+    valueColor: "#FF5252",
     description:
       "The number of questions that were never answered correctly, even after multiple attempts.",
   },
@@ -46,7 +46,7 @@ export const cardData: Record<string, CardData> = {
   },
   correctRate: {
     label: "Correct Rate",
-    valueColor: "#4CAF50",
+    valueColor: "#A5D6A7",
     description:
       "The percentage of questions that were answered correctly, regardless of how many attempts it took.",
   },
@@ -58,7 +58,7 @@ export const cardData: Record<string, CardData> = {
   },
   attemptTypeStats: {
     label: "Attempt Type Stats",
-    valueColor: "#4CAF50",
+    valueColor: "#A5D6A7",
     description: "The stats for the selected attempt type.",
   },
   totalIncorrectAttempts: {
@@ -69,7 +69,7 @@ export const cardData: Record<string, CardData> = {
   },
   oneAttempt: {
     label: "One Attempt",
-    valueColor: "#4CAF50",
+    valueColor: "#A5D6A7",
     description:
       "The number of questions that were answered correctly with one attempt.",
     className: "attempt-distribution-card",

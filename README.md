@@ -71,20 +71,20 @@ A TypeScript-first schema validation library. Used to define and validate the st
 
 ### Color Scale for Success Rates
 
-The application uses a green color gradient to visualize accuracy and success rates on the total questions number. The color scale ranges from darkest green (excellent performance) to lightest green (poor performance), providing immediate visual feedback:
+The application uses a bright green color gradient to visualize accuracy and success rates on the total questions number. The color scale ranges from darker green (excellent performance) to lighter green (poor performance), providing immediate visual feedback:
 
-- **90-100%**: `#1B5E20` (Darkest green - Excellent)
-- **80-89%**: `#2E7D32` (Very dark green - Very good)
-- **70-79%**: `#388E3C` (Dark green - Good)
-- **60-69%**: `#43A047` (Medium-dark green - Above average)
-- **50-59%**: `#4CAF50` (Medium green - Average)
-- **40-49%**: `#66BB6A` (Medium-light green - Below average)
-- **30-39%**: `#81C784` (Light green - Poor)
-- **20-29%**: `#A5D6A7` (Lighter green - Very poor)
-- **10-19%**: `#C8E6C9` (Very light green - Very low)
-- **0-9%**: `#E8F5E9` (Lightest green - Extremely low)
+- **90-100%**: `#2E8B3D` (Darker green - Excellent)
+- **80-89%**: `#4CAF50` (Medium-dark green - Very good)
+- **70-79%**: `#66BB6A` (Medium green - Good)
+- **60-69%**: `#81C784` (Medium-light green - Above average)
+- **50-59%**: `#A5D6A7` (Light green - Average)
+- **40-49%**: `#C8E6C9` (Lighter green - Below average)
+- **30-39%**: `#E8F5E9` (Very light green - Poor)
+- **20-29%**: `#F1F8F2` (Very light green - Very poor)
+- **10-19%**: `#F5FAF6` (Extremely light green - Very low)
+- **0-9%**: `#FAFDFA` (Lightest green - Extremely low)
 
-This color scale is applied dynamically to statistics cards based on their correct rate, making it easy to see preformance based on the color of total questions answered.
+This color scale is applied dynamically to statistics cards based on their correct rate, making it easy to see performance based on the color of total questions answered.
 
 ### Attempt Types System
 
@@ -101,8 +101,10 @@ The interface uses a modern glassmorphism design with:
 
 - Semi-transparent backgrounds with backdrop blur effects
 - Subtle borders and shadows for depth
-- A dark color scheme with warm gradient accents
+- A dark gray color scheme (`#343a40`) with a vertical gradient fade to lighter gray
 - Smooth animations and transitions for interactive elements
+- Click-based tooltips for detailed information (accessible via keyboard navigation)
+- Responsive design that scales smoothly across all screen sizes
 
 ### Component Architecture
 
@@ -110,9 +112,15 @@ The application follows a modular component structure:
 
 - **OverallStats**: Displays aggregate statistics across all questions
 - **AttemptTypeStats**: Shows statistics filtered by attempt type with a custom selector
-- **AttemptDistribution**: Visualizes the distribution of attempts (1, 2, or 3+ attempts per question)
-- **StatCard**: Reusable card component for displaying individual metrics
+- **AttemptDistribution**: Visualizes the distribution of attempts (1, 2, or 3+ attempts per question) with metallic gray gradient styling
+- **StatCard**: Reusable card component for displaying individual metrics with click-based tooltips
 - **AttemptTypeSelector**: Custom dropdown component for filtering by attempt type
+
+### User Experience Features
+
+- **Click-based tooltips**: Information icons can be clicked to reveal detailed descriptions, with click-outside-to-close functionality
+- **Responsive typography**: All text elements scale appropriately across different screen sizes
+- **Visual hierarchy**: Bright section titles with subtle shadows for depth, contrasting against the dark background
 
 ### Statistics Calculation
 

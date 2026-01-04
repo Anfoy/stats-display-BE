@@ -155,16 +155,16 @@ function calculateOverallStats(
 }
 
 const ACCURACY_COLORS = [
-  { threshold: 90, color: "#1B5E20" }, // Darkest green - excellent
-  { threshold: 80, color: "#2E7D32" }, // Very dark green - very good
-  { threshold: 70, color: "#388E3C" }, // Dark green - good
-  { threshold: 60, color: "#43A047" }, // Medium-dark green - above average
-  { threshold: 50, color: "#4CAF50" }, // Medium green - average
-  { threshold: 40, color: "#66BB6A" }, // Medium-light green - below average
-  { threshold: 30, color: "#81C784" }, // Light green - poor
-  { threshold: 20, color: "#A5D6A7" }, // Lighter green - very poor
-  { threshold: 10, color: "#C8E6C9" }, // Very light green - very low
-  { threshold: 0, color: "#E8F5E9" }, // Lightest green - extremely low
+  { threshold: 90, color: "#2E8B3D" }, // Darkest green - excellent (brighter)
+  { threshold: 80, color: "#4CAF50" }, // Very dark green - very good (brighter)
+  { threshold: 70, color: "#66BB6A" }, // Dark green - good (brighter)
+  { threshold: 60, color: "#81C784" }, // Medium-dark green - above average (brighter)
+  { threshold: 50, color: "#A5D6A7" }, // Medium green - average (brighter)
+  { threshold: 40, color: "#C8E6C9" }, // Medium-light green - below average (brighter)
+  { threshold: 30, color: "#E8F5E9" }, // Light green - poor (brighter)
+  { threshold: 20, color: "#F1F8F2" }, // Lighter green - very poor (brighter)
+  { threshold: 10, color: "#F5FAF6" }, // Very light green - very low (brighter)
+  { threshold: 0, color: "#FAFDFA" }, // Lightest green - extremely low (brighter)
 ] as const;
 
 export function getAccuracyColor(correctRate: number): string {

@@ -9,7 +9,7 @@ export function OverallStats({ stats }: { stats: Statistics.OverallStats }) {
   return (
     <div className="section">
       <h2 className="section-title section-title-overall">
-        Overall Statistics
+        Your Overall Stats
       </h2>
       <p className="section-description">
         <span className="section-description-icon">?</span>
