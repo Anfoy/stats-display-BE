@@ -6,6 +6,18 @@ Created by Anthony Dierkes
 
 A React application for displaying statistics and analytics from exam submission data.
 
+**AI USAGE NOTE**
+This project <u>does</u> include AI usage. It was only used for
+optimizing certain functions, mostly filtering ones, and formatting. Additionally, it was used
+to create the groundwork for styling and its applications (e.g responsiveness, animations, coloring).
+which were then further tweaked and reviewed by me. I marked place, outside of the css files, where AI was implemented.
+All components, schemas, loaders, and calculations were handbuilt.
+
+**ADDITIONAL NOTES**
+Some things could definitely be optimized (e.g rendering the cards dynamically), however it adds an unnecessary complexity with generics and types for a small take-home project like this, so it was left out.
+
+Although there is only one attempt type in the example data, I thought it would be interesting to show that there could be specific data per attempt type and can be filtered through that, hence the dropdown.
+
 ## Getting Started
 
 To run this project locally after cloning from GitHub:
@@ -83,8 +95,6 @@ The application supports filtering statistics by different attempt types (e.g., 
 - **Provides filtering** through a custom dropdown selector that allows users to view statistics for specific attempt types or all attempts combined
 - **Maintains type safety** throughout the filtering process using TypeScript
 
-Although there is only one attempt type in the example data, I thought it would be interesting to show that there could be specific data per attempt type.
-
 ### Glass Morphism UI
 
 The interface uses a modern glassmorphism design with:
@@ -119,3 +129,6 @@ All data structures are validated using Zod schemas, ensuring:
 - Statistics calculations produce valid results
 - Type inference throughout the application
 - Runtime validation for data integrity
+
+Zod is technically not necessary, however if I was recieving data from an API i would use it,
+so I implemented it to show how i would structure my schemas and typing.
