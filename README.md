@@ -1,4 +1,4 @@
-# Local Storage Stats - Boilerexams Take-Home Assessment
+# Local Storage Stats - Boilerexams Application Project
 
 **Project: <u>3</u>** | Local Storage Stats
 
